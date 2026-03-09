@@ -1,0 +1,124 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  // Or use MongoDB:
+  // provider = "mongodb"
+  // url      = env("DATABASE_URL")
+}
+
+// Admin User Model
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  activityLogs AdminActivityLog[]
+}
+
+// Admin Activity Log Model
+model AdminActivityLog {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  action      String   // "LOGIN", "CREATE_ADMIN", "DELETE_ADMIN", "UPDATE_PASSWORD", "CREATE_ITEM", "UPDATE_ITEM", "DELETE_ITEM"
+  targetType  String?  // "USER", "SHOWROOM", "PORTFOLIO", "REALESTATE"
+  targetId    String?
+  description String
+  metadata    Json?
+  ipAddress   String?
+  createdAt   DateTime @default(now())
+
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
+}
+
+// Showroom Item Model
+model ShowroomItem {
+  id           String          @id @default(cuid())
+  title        String
+  description  String
+  fullDescription String       @db.Text
+  price        Float
+  category     String
+  availability String          // "Available", "Sold", "Reserved"
+  specifications Json?
+  images       ShowroomImage[]
+  featured     Boolean         @default(false)
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+
+  @@index([category])
+  @@index([featured])
+}
+
+model ShowroomImage {
+  id             String       @id @default(cuid())
+  url            String
+  publicId       String
+  showroomItemId String
+  showroomItem   ShowroomItem @relation(fields: [showroomItemId], references: [id], onDelete: Cascade)
+  order          Int          @default(0)
+  createdAt      DateTime     @default(now())
+
+  @@index([showroomItemId])
+}
+
+// Portfolio Project Model
+model PortfolioProject {
+  id               String           @id @default(cuid())
+  title            String
+  description      String           @db.Text
+  clientType       String           // "Individual", "Corporate"
+  location         String?
+  servicesDelivered String[]
+  completionDate   DateTime
+  images           PortfolioImage[]
+  featured         Boolean          @default(false)
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  @@index([clientType])
+  @@index([featured])
+}
+
+model PortfolioImage {
+  id         String           @id @default(cuid())
+  url        String
+  publicId   String
+  projectId  String
+  project    PortfolioProject @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  order      Int              @default(0)
+  createdAt  DateTime         @default(now())
+
+  @@index([projectId])
+}
+
+// Real Estate Section Model
+model RealEstateSection {
+  id               String   @id @default(cuid())
+  sectionName      String   // "Section A", "Section B", etc.
+  description      String   @db.Text
+  completedWorks   String[]
+  ongoingWorks     String[]
+  progressPercentage Int    @default(0)
+  status           String   // "Planning", "Ongoing", "Completed"
+  images           String[]
+  imagePublicIds   String[]
+  order            Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([status])
+  @@index([order])
+}
