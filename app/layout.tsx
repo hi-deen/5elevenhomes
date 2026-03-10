@@ -89,12 +89,15 @@ export default function RootLayout({
             }}
           />
           
-          {/* Elfsight Chatbot Widget */}
+          {/* Elfsight Chatbot and Whatsapp Widget */}
           <Script 
             src="https://elfsightcdn.com/platform.js" 
             strategy="lazyOnload"
           />
+          <script src="https://elfsightcdn.com/platform.js" async></script>
           <div className="elfsight-app-a6cddf72-1d7b-4368-9d95-3b29c6c6fcdc" data-elfsight-app-lazy></div>
+          <div className="elfsight-app-ed5be1a4-4235-4893-b0f9-149b5b3b392b" data-elfsight-app-lazy></div>
+          
         </AdminProvider>
       </body>
     </html>
