@@ -26,8 +26,8 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               className="flex items-center"
             >
-              <span className="text-2xl md:text-3xl font-serif font-bold text-gold">
-                5Eleven Homes
+              <span className="text-2xl md:text-3xl font-sans font-bold text-gold">
+                5ELEVEN HOMES
               </span>
             </motion.div>
           </Link>

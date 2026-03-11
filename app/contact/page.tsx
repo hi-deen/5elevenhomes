@@ -72,7 +72,7 @@ export default function ContactPage() {
     {
       icon: <Phone size={28} />,
       title: 'Phone',
-      details: ['+234 813 200 1621', '+234 706 711 1222'],
+      details: ['+234 706 711 1222', '+234 813 200 1621'],
     },
     {
       icon: <Mail size={28} />,
@@ -82,7 +82,7 @@ export default function ContactPage() {
     {
       icon: <Clock size={28} />,
       title: 'Business Hours',
-      details: ['Monday - Friday: 8:00 AM - 6:00 PM', 'Saturday: 9:00 AM - 4:00 PM', 'Sunday: Closed'],
+      details: ['Tuesday - Saturday: 10:00 AM - 5:00 PM', 'Monday: By appointment Only', 'Sunday: Closed'],
     },
   ];
 

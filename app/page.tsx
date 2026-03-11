@@ -96,9 +96,9 @@ function HeroSection() {
             </span>
           </motion.div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-mono font-bold text-white mb-6 leading-tight">
             Welcome to <br className="hidden md:block" />
-            <span className="text-gradient">5Eleven Homes</span>
+            <span className="text-gradient">5ELEVEN HOMES</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">

@@ -12,8 +12,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-serif font-bold text-gold mb-4">
-              5Eleven Homes Ltd
+            <h3 className="text-2xl font-mono font-bold text-gold mb-4">
+              5ELEVEN HOMES LTD
             </h3>
             <p className="text-gray-300 mb-4">
               Your premier destination for luxury interior design and exceptional real estate solutions. 
@@ -89,8 +89,8 @@ export default function Footer() {
               <li className="flex items-center space-x-3 text-gray-300">
                 <Phone size={20} className="text-gold flex-shrink-0" />
                 <div>
-                  <div>+234 813 200 1621</div>
                   <div>+234 706 711 1222</div>
+                  <div>+234 813 200 1621</div>
                 </div>
               </li>
               <li className="flex items-start space-x-3 text-gray-300">

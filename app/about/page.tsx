@@ -19,7 +19,7 @@ export default function AboutPage() {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-serif font-bold text-white mb-6">
-              About <span className="text-gold">5Eleven Homes</span>
+              About <span className="text-gold font-sans">5ELEVEN HOMES</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Your trusted partner in creating exceptional living spaces and real estate solutions
