@@ -82,7 +82,7 @@ export default function ContactPage() {
     {
       icon: <Clock size={28} />,
       title: 'Business Hours',
-      details: ['Tuesday - Saturday: 10:00 AM - 5:00 PM', 'Monday: By appointment Only', 'Sunday: Closed'],
+      details: ['Tuesday - Saturday: 10:00 AM - 5:00 PM', 'Monday: By Appointment Only', 'Sunday: Closed'],
     },
   ];
 

@@ -107,7 +107,7 @@ export default function Footer() {
               <h5 className="text-sm font-semibold text-gold mb-2">Business Hours</h5>
               <div className="text-sm space-y-1 text-gray-300">
                 <div>Tue - Sat: 10am - 5pm</div>
-                <div>Monday: By appointment only</div>
+                <div>Monday: By Appointment Only</div>
                 <div className="text-gray-400">Closed on Sundays</div>
               </div>
             </div>
