@@ -263,7 +263,7 @@ export default function RealEstatesPage() {
                     Contact Investment Team
                   </motion.button>
                 </a>
-                <a href="tel:+2348132001621">
+                <a href="tel:+2347067111222">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
