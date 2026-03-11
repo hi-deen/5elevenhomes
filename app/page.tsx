@@ -194,8 +194,11 @@ function IntroductionSection() {
             transition={{ duration: 0.6 }}
             className="relative h-[500px] rounded-lg overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-gold/20 to-transparent z-10" />
-            <div className="absolute inset-0 bg-gray-800" />
+            {/* <div className="absolute inset-0 bg-gradient-to-tr from-gold/20 to-transparent z-10" /> */}
+            <div
+    className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2832&auto=format&fit=crop')] bg-cover bg-center"
+  />
+            {/* <div className="absolute inset-0 bg-gray-800" /> */}
           </motion.div>
         </div>
       </Container>
