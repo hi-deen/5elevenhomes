@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     default: "5Eleven Homes Ltd - Luxury Interior Design & Real Estate",
     template: "%s | 5Eleven Homes Ltd",
   },
+  icons: {
+    icon: '/favicon.png',       // main favicon
+    shortcut: '/favicon.png',   // older browsers
+    apple: '/favicon.png',      // iOS home‑screen icon
+  },
   description: "Premier interior design and real estate company offering luxury showroom items, custom interior solutions, and exceptional real estate projects in Kaduna, Nigeria.",
   keywords: ["interior design", "real estate", "luxury furniture", "home design", "Kaduna", "Nigeria", "5Eleven Homes"],
   authors: [{ name: "5Eleven Homes Ltd" }],
